@@ -13,6 +13,7 @@
 @desktop: 1024px;
 @desktop-area: 1024px;
 @color-nav-text: #343434;
+@color-placeholder: #d7d7d7;
 body {
     background-color: @background-color;
     div {
@@ -90,54 +91,53 @@ body {
             font-family: Roboto;
             text-align: center;
             color: white;
-            
         }
         >form {
-            .header-input{
+            .header-input {
                 border: solid 2px white !important;
+                font-size: 100%;
+                color: @color-placeholder;
             }
-            >div.form-row{
+            >div.form-row {
                 >div:nth-child(4) {
-                    button{
+                    button {
                         border-color: #007bff !important;
+                        color: white;
                     }
-                }   
+                }
             }
-
             @media (min-width: @desktop) {
                 padding-left: 0% !important;
                 padding-right: 0% !important;
                 margin-left: -0px;
                 margin-right: -0px;
                 >div.form-row {
-                
-                    >div:first-child{
-                        input{
+                    position: relative;
+                    top: 2.3em !important;
+                    >div:first-child {
+                        input {
                             position: relative;
                             left: -0.7em !important;
                             width: 99% !important;
                         }
                     }
-                    
                     >div:nth-child(2) {
-                        
-                        select{
+                        select {
                             position: relative;
                             left: 0em !important;
                             width: 98% !important;
+                            color: @color-placeholder  !important;
                         }
-                        
                     }
                     >div:nth-child(3) {
-                                                
-                        input{
+                        input {
                             position: relative;
                             left: 0.7em !important;
                             width: 98% !important;
                         }
                     }
                     >div:nth-child(4) {
-                        button{
+                        button {
                             position: relative;
                             left: 1.5em !important;
                             width: 96% !important;
@@ -150,12 +150,19 @@ body {
         h1.display-6 {
             font-size: 48px;
             font-weight: 700;
+            @media (min-width: @desktop) {
+                position: relative;
+                top: -0.9em !important;
+            }
         }
         p.lead {
             font-size: 16px;
             font-weight: 400;
-            margin-top: 3%;
-            margin-bottom: 6%;
+            letter-spacing: 0.003em;
+            @media (min-width: @desktop) {
+                position: relative;
+                top: -1.2em !important;
+            }
         }
         .header-input {
             width: 100%;
@@ -163,6 +170,19 @@ body {
         form {
             display: block;
         }
+        ::-webkit-input-placeholder {
+            color: @color-placeholder;
+        }
+        ::-moz-placeholder {
+            color: @color-placeholder;
+        }
+        /* Firefox 19+ */
+        :-moz-placeholder {
+            color: @color-placeholder;
+        }
+        /* Firefox 18- */
+        :-ms-input-placeholder {
+            color: @color-placeholder;
+        }
     }
 }
-
