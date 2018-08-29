@@ -1,6 +1,11 @@
 @font-face {
     font-family: 'Roboto';
-    src: url('/fonts/Roboto-Bold/Roboto-Condensed.ttf') format('truetype');
+    src: url('./fonts/Roboto-Bold/Roboto-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+
+    font-family: 'Roboto-Ligth';
+    src: url('./fonts/Roboto-Bold/Roboto-Medium.ttf') format('truetype');
     font-style: normal;
     font-weight: 400;
 }
@@ -15,7 +20,7 @@
 @color-nav-text: #343434;
 @color-placeholder: #d7d7d7;
 body {
-    background-color: @background-color;
+    //background-color: @background-color;
     div {
         #main-nav {
             background-color: white !important;
@@ -58,22 +63,28 @@ body {
                             }
                         }
                         >li:first-child {
-                            right: -1.6%;
+                            right: -1.0em;
+                            top: -0.1em;
                         }
                         >li:nth-child(2) {
-                            right: -1.0%;
+                            right: -0.7em;
+                            top: -0.1em;
                         }
                         >li:nth-child(3) {
-                            right: -1.0%;
+                            right: -0.65em;
+                            top: -0.1em;
                         }
                         >li:nth-child(4) {
-                            right: -0.6%;
+                            right: -0.4em;
+                            top: -0.1em;
                         }
                         >li:nth-child(5) {
-                            right: -1.6%;
+                            right: -0.8em;
+                            top: -0.05em;
                         }
                         >li:last-child {
-                            right: -4.5%;
+                            right: -2.3em;
+                            top: -0.15em;
                         }
                     }
                 }
@@ -88,15 +99,18 @@ body {
         background-size: 1400px;
         width: auto;
         >div.container {
-            font-family: Roboto;
+            font-family: 'Roboto' !important;
             text-align: center;
             color: white;
+            p.lead{
+                font-family: 'Roboto-Ligth';
+                font-weight: 200;
+            }
         }
         >form {
             .header-input {
                 border: solid 2px white !important;
-                font-size: 100%;
-                color: @color-placeholder;
+                font-size: 100%;                
             }
             >div.form-row {
                 >div:nth-child(4) {
@@ -122,11 +136,10 @@ body {
                         }
                     }
                     >div:nth-child(2) {
-                        select {
+                        >select {
                             position: relative;
                             left: 0em !important;
-                            width: 98% !important;
-                            color: @color-placeholder  !important;
+                            width: 98% !important;                            
                         }
                     }
                     >div:nth-child(3) {
@@ -184,5 +197,10 @@ body {
         :-ms-input-placeholder {
             color: @color-placeholder;
         }
+        .placeholder{
+            color: @color-placeholder !important;
+        }
+        
     }
+    
 }

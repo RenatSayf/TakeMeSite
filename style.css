@@ -1,11 +1,10 @@
 @font-face {
   font-family: 'Roboto';
-  src: url('/fonts/Roboto-Bold/Roboto-Condensed.ttf') format('truetype');
+  src: url('fonts/Roboto-Bold/Roboto-Regular.ttf') format('truetype');
+  font-family: 'Roboto-Ligth';
+  src: url('fonts/Roboto-Bold/Roboto-Medium.ttf') format('truetype');
   font-style: normal;
   font-weight: 400;
-}
-body {
-  background-color: #d7d7d7;
 }
 body div #main-nav {
   background-color: white !important;
@@ -48,22 +47,28 @@ body div #main-nav > div ul.navbar-nav > li > a:hover {
     padding: 0 !important;
   }
   body div #main-nav > div ul.navbar-nav > li:first-child {
-    right: -1.6%;
+    right: -1em;
+    top: -0.1em;
   }
   body div #main-nav > div ul.navbar-nav > li:nth-child(2) {
-    right: -1%;
+    right: -0.7em;
+    top: -0.1em;
   }
   body div #main-nav > div ul.navbar-nav > li:nth-child(3) {
-    right: -1%;
+    right: -0.65em;
+    top: -0.1em;
   }
   body div #main-nav > div ul.navbar-nav > li:nth-child(4) {
-    right: -0.6%;
+    right: -0.4em;
+    top: -0.1em;
   }
   body div #main-nav > div ul.navbar-nav > li:nth-child(5) {
-    right: -1.6%;
+    right: -0.8em;
+    top: -0.05em;
   }
   body div #main-nav > div ul.navbar-nav > li:last-child {
-    right: -4.5%;
+    right: -2.3em;
+    top: -0.15em;
   }
 }
 body header {
@@ -77,14 +82,17 @@ body header {
   /* Firefox 18- */
 }
 body header > div.container {
-  font-family: Roboto;
+  font-family: 'Roboto' !important;
   text-align: center;
   color: white;
+}
+body header > div.container p.lead {
+  font-family: 'Roboto-Ligth';
+  font-weight: 200;
 }
 body header > form .header-input {
   border: solid 2px white !important;
   font-size: 100%;
-  color: #d7d7d7;
 }
 body header > form > div.form-row > div:nth-child(4) button {
   border-color: #007bff !important;
@@ -106,11 +114,10 @@ body header > form > div.form-row > div:nth-child(4) button {
     left: -0.7em !important;
     width: 99% !important;
   }
-  body header > form > div.form-row > div:nth-child(2) select {
+  body header > form > div.form-row > div:nth-child(2) > select {
     position: relative;
     left: 0em !important;
     width: 98% !important;
-    color: #d7d7d7 !important;
   }
   body header > form > div.form-row > div:nth-child(3) input {
     position: relative;
@@ -162,4 +169,7 @@ body header :-moz-placeholder {
 }
 body header :-ms-input-placeholder {
   color: #d7d7d7;
+}
+body header .placeholder {
+  color: #d7d7d7 !important;
 }
